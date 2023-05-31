@@ -19,13 +19,19 @@ int _printf(const char *format, ...)
 	va_start(args, format);
 	for (i = 0; format[i] != '\0'; i++)
 	{
-		if (format[i] == '%' && format[i + 1] != '\0')
+		if (format[i] == '%' && format[i + 1] != '%' && format[i + 1] != '\0')
 		{			
 			f = call_printfunc(&format[i + 1]);
 			if (f == NULL)
 				continue;
 			count += f(args);
 			i = i + 2;
+		}
+		if (format[i] == '%' && format[i] == '%')
+		{
+			count += write(1, (&format[i + 1]), 1);
+			i++;
+			continue;
 		}
 		count += write(1, (format + i), 1);
 	}

@@ -43,4 +43,3 @@ int string_printer(va_list args)
 	return (count);
 }
 
-
