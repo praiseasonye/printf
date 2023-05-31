@@ -43,3 +43,16 @@ int string_printer(va_list args)
 	return (count);
 }
 
+/**
+ * percent_printer - a function that prints a percentage (%) sign from %%
+ *                   input.
+ * @args: it would be turned to a void parameter in the code.
+ *
+ * Return: the number of things printed.
+ */
+
+int percent_printer(va_list args)
+{
+	(void)args;
+	return (write(1, "%", 1));
+}

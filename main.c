@@ -17,8 +17,8 @@ int main(void)
         printf("please print me the sentence stored in variable a inbuilt: %s nicely\n", a);
         printf("%%please print me the letter stored in variable b inbuilt: %c nicely\n", b);
         _printf("-----------------------------------------------------\n");
-        _printf("please print me the sentence stored in variable a: %s nicely\n", b);
-        _printf("%%please print me the letter stored in variable b: %c nicely\n", a);
+        _printf("please print me the sentence stored in variable a: %s nicely\n", a);
+        _printf("%%please print me the letter stored in variable b: %c nicely\n", b);
 
 	len_inbuilt = printf("jesus %c king of kings. %s\n", b, a);
 	len_hmd = _printf("jesus %c king of kings. %s\n", b, a);
