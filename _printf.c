@@ -26,7 +26,9 @@ int _printf(const char *format, ...)
 		{			
 			f = call_printfunc(&format[i + 1]);
 			if (f == NULL)
-				continue;
+			{
+				return (-1);
+			}
 			count += f(args);
 			i = i + 2;
 		}

@@ -4,6 +4,7 @@
 #include <unistd.h>
 #include <stdarg.h>
 #include <stdlib.h>
+#include <errno.h>
 
 /**
  * struct format_function - a structure that holds the specifier and

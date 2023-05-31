@@ -16,13 +16,13 @@ int (*call_printfunc(const char *s))(va_list)
 		{"c", char_printer},
 		{"s", string_printer},
 		{"%", percent_printer},
-		{'\0', NULL}
+		{NULL, NULL}
 	};
 	int i = 0;
 
-	for (i = 0; *(format_func[i].specifier) != '\0'; i++)
+	for (i = 0; i < 4; i++)
 	{
-		if (*(format_func[i].specifier) != '\0' && *(format_func[i].specifier) == *s)
+		if (format_func[i].specifier != NULL && *(format_func[i].specifier) == *s)
 			return (format_func[i].func);
 	}
 	return (NULL);
