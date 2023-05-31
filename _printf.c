@@ -17,7 +17,7 @@ int _printf(const char *format, ...)
 	va_list args;
 
 	if (format == NULL)
-		return (-1);
+		return (0);
 	
 	va_start(args, format);
 	for (i = 0; format && format[i] != '\0'; i++)
@@ -27,7 +27,8 @@ int _printf(const char *format, ...)
 			f = call_printfunc(&format[i + 1]);
 			if (f == NULL)
 			{
-				return (-1);
+				count = -1;
+				exit(EXIT_FAILURE);
 			}
 			count += f(args);
 			i = i + 2;
