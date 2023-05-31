@@ -16,7 +16,7 @@ int (*call_printfunc(const char *s))(va_list)
 		{"c", char_printer},
 		{"s", string_printer},
 		/*{"%", percent_printer},*/
-		{NULL, NULL}
+		{'\0', NULL}
 	};
 	int i = 0;
 
