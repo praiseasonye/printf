@@ -16,14 +16,16 @@ int _printf(const char *format, ...)
 	int count = 0;
 	va_list args;
 
-	if (!format || (format[0] == '%' && !format[1]))
-		return (-1);
-	if (format[0] ==  '%' && format[1] == ' ' && !format[2])
+	if (format == NULL)
 		return (-1);
 	
 	va_start(args, format);
 	for (i = 0; format && format[i] != '\0'; i++)
 	{
+		if (!format || (format[i] == '%' && !format[i + 1]))
+                	return (-1);
+        	if (format[i] ==  '%' && format[i + 1] == ' ' && !format[i + 2])
+                	return (-1);
 		if (format[i] == '%' && format[i + 1] != '\0')
 		{			
 			f = call_printfunc(&format[i + 1]);
