@@ -12,10 +12,14 @@ int char_printer(va_list args)
 {
 	char c;
 	int count = 0;
+	c = (char)va_arg(args, int);
 
-	 c = (char)va_arg(args, int);
-	 count = write(1, &c, 1);
-	 return (count);
+	if (c)
+	{
+		 count = write(1, &c, 1);
+		 return (count);
+	}
+	 return (0);
 }
 
 /**
