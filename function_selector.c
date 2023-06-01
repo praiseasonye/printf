@@ -20,7 +20,7 @@ int (*call_printfunc(const char *s))(va_list)
 	};
 	int i = 0;
 
-	for (i = 0; i < 4; i++)
+	for (i = 0; i < 3; i++)
 	{
 		if (format_func[i].specifier != NULL && *(format_func[i].specifier) == *s)
 			return (format_func[i].func);
