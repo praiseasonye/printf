@@ -12,16 +12,17 @@ int char_printer(va_list args)
 {
 	char c;
 	int count = 0;
+
 	c = (char)va_arg(args, int);
 
 	if (c)
 	{
-		 count = write(1, &c, 1);
-		 return (count);
+		count = write(1, &c, 1);
+		return (count);
 	}
 	if (c == '\0')
-		return(0);
-	 return (0);
+		return (0);
+	return (0);
 }
 
 /**

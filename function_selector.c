@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- * call_printfunc - a function that returns a pointer to the appropriate function
- *                  if the character passed to it as argument matches the
- *                  specifier includes in the _printf variadic arguments
+ * call_printfunc - a function that returns a pointer to the appropriate
+ *                  function if the character passed to it as argument
+ *                  matches thespecifier includes in the _printf
+ *                  variadic arguments
  *
  * @s: this is the specifier that would determine the function to be returned
  *

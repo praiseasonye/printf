@@ -17,7 +17,8 @@
  *
  */
 
-typedef struct format_function {
+typedef struct format_function
+{
 	const char *specifier;
 	int (*func)(va_list);
 } ff_t;
