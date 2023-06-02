@@ -31,8 +31,7 @@ int _printf(const char *format, ...)
 			f = call_printfunc(&format[i + 1]);
 			if (f == NULL)
 			{
-				write(1, "print failure\n", 14);
-				exit(EXIT_FAILURE);
+				return (-1);
 			}
 			count += f(args);
 			i = i + 2;
