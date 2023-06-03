@@ -41,7 +41,7 @@ int string_printer(va_list args)
 
 	s = va_arg(args, char *);
 	if (s == NULL)
-		return (0);
+		s = "(null)";
 	while (s[i] != '\0')
 	{
 		count += write(1, (s + i), 1);
