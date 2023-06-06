@@ -33,6 +33,8 @@ int _printf(const char *format, ...)
 			{
 				return (-1);
 			}
+			if (f(args) = 0)
+				return(-1);
 			count += f(args);
 			i = i + 2;
 		}
