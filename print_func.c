@@ -21,8 +21,8 @@ int char_printer(va_list args)
 		return (count);
 	}
 	if (c == '\0')
-		return (0);
-	return (0);
+		return (-1);
+	return (-1);
 }
 
 /**
