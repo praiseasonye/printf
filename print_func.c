@@ -20,7 +20,7 @@ int char_printer(va_list args)
 		count = write(1, &c, 1);
 		return (count);
 	}
-	if (c == NULL || c == '\0')
+	if (c == '\0')
 		return (-1);
 	return (-1);
 }
@@ -41,8 +41,10 @@ int string_printer(va_list args)
 
 	s = va_arg(args, char *);
 	if (s == NULL)
+	{
 		s = "(null)";
 		return (-1);
+	}
 	while (s[i] != '\0')
 	{
 		count += write(1, (s + i), 1);
