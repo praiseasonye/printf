@@ -22,10 +22,10 @@ int _printf(const char *format, ...)
 	va_start(args, format);
 	for (i = 0; format && format[i] != '\0'; i++)
 	{
-		/*if (!format || (format[i] == '%' && !format[i + 1]))
+		if (!format || (format[i] == '%' && !format[i + 1]))
 			return (-1);
 		if (format[i] ==  '%' && format[i + 1] == ' ' && !format[i + 2])
-			return (-1);*/
+			return (-1);
 		if (format[i] == '%')
 		{
 			f = call_printfunc(&format[i + 1]);

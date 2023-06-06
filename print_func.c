@@ -45,7 +45,7 @@ int string_printer(va_list args)
 		{
 			count += write(1, (s + i), 1);
 			i++;
-			return (-1);
+			return (0);
 		}
 
 	}
