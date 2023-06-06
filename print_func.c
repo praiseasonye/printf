@@ -20,8 +20,6 @@ int char_printer(va_list args)
 		count = write(1, &c, 1);
 		return (count);
 	}
-	if (c == '\0')
-		return (-1);
 	return (-1);
 }
 
