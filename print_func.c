@@ -43,7 +43,6 @@ int string_printer(va_list args)
 	if (s == NULL)
 	{
 		s = "(null)";
-		return (-1);
 	}
 	while (s[i] != '\0')
 	{
@@ -67,5 +66,4 @@ int percent_printer(va_list args)
 
 	(void)args;
 	return (write(1, &percent, 1));
-	return(0);
 }
