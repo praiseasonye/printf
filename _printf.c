@@ -24,8 +24,8 @@ int _printf(const char *format, ...)
 	{
 		if (!format || (format[i] == '%' && !format[i + 1]))
 			return (-1);
-		if (format[i] ==  '%' && format[i + 1] == ' ' && !format[i + 2])
-			return (-1);
+		/*if (format[i] ==  '%' && format[i + 1] == ' ' && !format[i + 2])
+			return (-1);*/
 		if (format[i] == '%')
 		{
 			f = call_printfunc(&format[i + 1]);
