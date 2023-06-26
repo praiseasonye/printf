@@ -10,20 +10,26 @@
 
 int main(void)
 {
-        char *a = "I am hungry";
-        char b = 65;
-        int len_inbuilt, len_hmd;
+	_printf("Let's print a simple. \n");
+	printf("Let's print a simple. \n");
 
-        printf("please print me the sentence %% stored in variable a inbuilt: %s nicely\n", a);
-        printf("%%please print me the letter stored in variable b inbuilt: %c nicely\n", b);
-        _printf("-----------------------------------------------------\n");
-        _printf("please print me the sentence %% stored in \" variable a: %s nicely\n", a);
-        _printf("%%please print me the letter stored in variable b: %c nicely\n", b);
+	_printf("%c\n", 'S');
+	printf("%c\n", 'S');
 
-        len_inbuilt = printf("jesus %c king of kings 100%%. %s\n", b, a);
-        len_hmd = _printf("jesus %c king of kings 10,000%%. %s\n", b, a);
-        printf("length of inbuilt printf; %d\n", len_inbuilt);
-        printf("lenght of home made printf: %d\n", len_hmd);
+	_printf("A char inside a sentence: %c. Did it work? \n", 'F');
+	printf("A char inside a sentence: %c. Did it work? \n", 'F');
+
+	_printf("Let's see if the cast if correctly done: %c. Did it work?\n", 48);
+	printf("Let's see if the cast if correctly done: %c. Did it work?\n", 48);
+
+	_printf("%s", "This sentence is retrieved from va_args!\n");
+	printf("%s", "This sentence is retrieved from va_args!\n");
+
+	_printf("complete the sentence: You %s nothing, jon snow.\n", "know");
+	printf("complete the sentence: You %s nothing, jon snow.\n", "know");
+
+	/*_printf("(Complete the sentence: You %s no%ching%s Snow.%c", 'W', 'i', "some ", "more", 'r', "s", "", "know", 't', ", Jon", '\n');*/
+	printf("(Complete the sentence: You %s no%ching%s Snow.%c", 'W', 'i', "some ", "more", 'r', "s", "", "know", 't', ", Jon", '\n');
         return (0);
 }
 
