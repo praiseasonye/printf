@@ -11,7 +11,7 @@
 
 int char_printer(va_list args)
 {
-	int c;
+	char c;
 	int count = 0;
 
 	c = va_arg(args, int);
