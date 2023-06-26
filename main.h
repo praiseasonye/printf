@@ -19,11 +19,11 @@
 
 typedef struct format_function
 {
-	const char *specifier;
+	const char specifier;
 	int (*func)(va_list);
 } ff_t;
 
-int (*call_printfunc(const char *s))(va_list);
+int (*call_printfunc(const char s))(va_list);
 int char_printer(va_list args);
 int string_printer(va_list args);
 int percent_printer(va_list args);

@@ -1,4 +1,5 @@
-#include "main.h"
+#include <unistd.h>
+#include <stdarg.h>
 
 /**
  * char_printer - this is a function that prints
@@ -10,17 +11,14 @@
 
 int char_printer(va_list args)
 {
-	char c;
+	int c;
 	int count = 0;
 
-	c = (char)va_arg(args, int);
+	c = va_arg(args, int);
 
 	if (c)
-	{
 		count = write(1, &c, 1);
-		return (count);
-	}
-	return (0);
+	return (count);
 }
 
 /**
