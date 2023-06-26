@@ -28,16 +28,18 @@ int _printf(const char *format, ...)
 		}
 		else if (format[i] == '%')
 		{
+
 			f = call_printfunc(format[i + 1]);
+			if (format[i] == '%' && !f)
+			{
+				count += write(1, &format[i], 1);
+				continue;
+			}
 			if (f == NULL)
 			{
 				return (-1);
 			}
 			count += f(args);
-			/*while (format[i + 1] && !call_printfunc(&format[i + 1]))
-			{
-				i++;
-			}*/
 			i++;
 		}
 	}
