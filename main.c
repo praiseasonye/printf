@@ -28,7 +28,7 @@ int main(void)
 	_printf("complete the sentence: You %s nothing, jon snow.\n", "know");
 	printf("complete the sentence: You %s nothing, jon snow.\n", "know");
 
-	/*_printf("(Complete the sentence: You %s no%ching%s Snow.%c", 'W', 'i', "some ", "more", 'r', "s", "", "know", 't', ", Jon", '\n');*/
+	_printf("(Complete the sentence: You %s no%ching%s Snow.%c", 'W', 'i', "some ", "more", 'r', "s", "", "know", 't', ", Jon", '\n');
 	printf("(Complete the sentence: You %s no%ching%s Snow.%c", 'W', 'i', "some ", "more", 'r', "s", "", "know", 't', ", Jon", '\n');
         return (0);
 }

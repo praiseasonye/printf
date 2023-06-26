@@ -40,7 +40,7 @@ int string_printer(va_list args)
 	s = va_arg(args, char *);
 	if (s == NULL)
 	{
-		return (0);
+		s = "(null)";
 	}
 	while (s[i] != '\0')
 	{
@@ -49,6 +49,7 @@ int string_printer(va_list args)
 	}
 	return (count);
 }
+
 
 /**
  * percent_printer - a function that prints a percentage (%) sign from %%
