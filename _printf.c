@@ -35,8 +35,6 @@ int _printf(const char *format, ...)
 				count += write(1, &format[i], 1);
 				continue;
 			}
-			else if (f == NULL)
-				return (-1);
 			count += f(args);
 			i++;
 		}
