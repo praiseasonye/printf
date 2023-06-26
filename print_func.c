@@ -40,7 +40,7 @@ int string_printer(va_list args)
 	s = va_arg(args, char *);
 	if (s == NULL)
 	{
-		s = "(null)";
+		return (0);
 	}
 	while (s[i] != '\0')
 	{
