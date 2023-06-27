@@ -26,7 +26,7 @@ typedef struct format_function
 int (*call_printfunc(const char s))(va_list);
 int char_printer(va_list args);
 int string_printer(va_list args);
-/*int percent_printer(va_list args);*/
+int percent_printer(va_list args);
 int _printf(const char *format, ...);
 /*int _putchar(char c);*/
 
