@@ -25,14 +25,18 @@ int _printf(const char *format, ...)
 	for (i = 0; format && format[i] != '\0'; i++)
 	{
 		if (format[i] != '%')
-		{
 			count += write(1, &format[i], 1);
-		}
+
 		else if (format[i] == '%')
 		{
-
+			if (format[i + 1] == '%')
+			{
+				count += write(1, &format[i], 1);
+				i++;
+				continue;
+			}
 			f = call_printfunc(format[i + 1]);
-			if (format[i] == '%' && !f)
+			if (!f)
 			{
 				count += write(1, &format[i], 1);
 				continue;
