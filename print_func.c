@@ -15,13 +15,7 @@ int char_printer(va_list args)
 	int count = 0;
 
 	c = va_arg(args, int);
-	if (c)
-		count = write(1, &c, 1);
-	else
-	{
-		c = '-';
-		count = write(1, &c, 1);
-	}
+	count = write(1, &c, 1);
 	return (count);
 }
 
