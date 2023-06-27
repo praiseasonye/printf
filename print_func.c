@@ -18,6 +18,11 @@ int char_printer(va_list args)
 
 	if (c)
 		count = write(1, &c, 1);
+	else
+	{
+		c = '-';
+		count = write(1, &c, 1);
+	}
 	return (count);
 }
 
