@@ -55,13 +55,14 @@ int string_printer(va_list args)
  * @args: it would be turned to a void parameter in the code.
  *
  * Return: the number of things printed.
+ *
+ *
+ * int percent_printer(va_list args)
+ *{
+ *	char percent = '%';
+ *
+ *	(void)args;
+ *	write(1, &percent, 1);
+ *	return (1);
+ *}
  */
-
-/*int percent_printer(va_list args)
-{
-	char percent = '%';
-
-	(void)args;
-	write(1, &percent, 1);
-	return (1);
-}*/
