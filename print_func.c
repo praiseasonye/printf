@@ -59,6 +59,8 @@ int string_printer(va_list args)
 
 int percent_printer(va_list args)
 {
+	char percent = '%';
+
 	(void)args;
-	return (write(1, "%", 1));
+	return (write(1, &percent, 1));
 }
