@@ -80,8 +80,6 @@ int decimal_printer(va_list args)
 		num *= -1;
 		count += _putchar('-');
 	}
-	if (num == 0)
-		count += _putchar('0');
 	if (num >= 0 && num <= 9)
 		count += _putchar(num + '0');
 	if (num > 9)

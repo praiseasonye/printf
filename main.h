@@ -29,8 +29,6 @@ int string_printer(va_list args);
 int percent_printer(va_list args);
 int _printf(const char *format, ...);
 int _putchar(char c);
-
-/*format spec for d*/
 int decimal_printer(va_list args);
 
 #endif
