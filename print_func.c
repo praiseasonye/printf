@@ -1,5 +1,4 @@
-#include <unistd.h>
-#include <stdarg.h>
+#include "main.h"
 
 /**
  * char_printer - this is a function that prints
@@ -46,7 +45,6 @@ int string_printer(va_list args)
 	return (count);
 }
 
-
 /**
  * percent_printer - a function that prints a percentage (%) sign from %%
  *                   input.
@@ -64,3 +62,42 @@ int percent_printer(va_list args)
 	return (1);
 }
 
+/**
+ * decimal_printer - a function that prints
+ * a decimal using 'd'
+ * @args: dec to be printed
+ * Return: the number printed
+ */
+
+int decimal_printer(va_list args)
+{
+	long int num;
+	int count = 0, tenth, temp;
+
+	num = va_arg(args, int);
+	if (num < 0)
+	{
+		num *= -1;
+		count += _putchar('-');
+	}
+	if (num == 0)
+		count += _putchar('0');
+	if (num >= 0 && num <= 9)
+		count += _putchar(num + '0');
+	if (num > 9)
+	{
+		tenth = 10;
+		while (num / tenth > 9)
+		{
+			tenth *= 10;
+		}
+		while (tenth > 0)
+		{
+			temp = num / tenth;
+			num = num % tenth;
+			count += _putchar(temp + '0');
+			tenth = tenth / 10;
+		}
+	}
+	return (count);
+}
