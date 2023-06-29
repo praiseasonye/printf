@@ -19,6 +19,7 @@ int (*call_printfunc(const char s))(va_list)
 		{'%', percent_printer},
 		{'d', decimal_printer},
 		{'i', decimal_printer},
+		{'b', decimal_binary},
 		{'\0', NULL}
 	};
 	int i = 0;
