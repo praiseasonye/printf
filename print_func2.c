@@ -16,7 +16,7 @@ int binary_printer(va_list args)
 
 	decimal = va_arg(args, int);
 	bin_count = bin_counter(decimal);
-	bin_holder = malloc(bin_count * sizeof *bin_holder);
+	bin_holder = malloc(bin_count * sizeof (*bin_holder));
 	temp = decimal;
 	for (i = 0; i < bin_count - 1; i++)
 	{
@@ -48,6 +48,7 @@ int binary_printer(va_list args)
 int bin_counter(int num)
 {
 	int bin_count;
+
 	if (num == 1)
 		return (1);
 	bin_count = (1 + bin_counter(num / 2));
