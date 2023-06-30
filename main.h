@@ -30,6 +30,7 @@ int percent_printer(va_list args);
 int _printf(const char *format, ...);
 int _putchar(char c);
 int decimal_printer(va_list args);
-int decimal_binary(va_list args);
+int binary_printer(va_list args);
+int bin_counter(int num);
 
 #endif

@@ -99,32 +99,3 @@ int decimal_printer(va_list args)
 	}
 	return (count);
 }
-
-/**
- * decimal_binary - function that prints
- * a binary number
- * @args: the function argument
- * Return: the binary number
- */
-
-int decimal_binary(va_list args)
-{
-	unsigned int b;
-	int binary = 0, rem;
-
-	b = va_arg(args, unsigned int);
-
-	if (b == 0)
-	{
-		binary += _putchar('0');
-		return (binary);
-	}
-	while (b != 0)
-	{
-		rem = b % 2;
-		b /= 2;
-		binary += _putchar(rem + '0');
-	}
-return (binary);
-}
-
