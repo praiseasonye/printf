@@ -22,7 +22,7 @@ int binary_printer(va_list args)
 		count = _putchar('0');
 		return (count);
 	}
-	bin_count = bin_counter(decimal) * 2;
+	bin_count = bin_counter(decimal);
 	bin_holder = malloc(bin_count * sizeof (*bin_holder));
 	temp = decimal;
 	for (i = 0; i < bin_count - 1; i++)
