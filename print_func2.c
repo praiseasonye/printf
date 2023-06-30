@@ -12,10 +12,17 @@
 
 int binary_printer(va_list args)
 {
-	int i, bin_count = 0, count = 0, temp, *bin_holder, decimal;
+	unsigned int decimal;
+	unsigned int count = 0, temp, *bin_holder;
+	int bin_count = 0, i;
 
 	decimal = va_arg(args, int);
-	bin_count = bin_counter(decimal);
+	if (decimal == 0)
+	{
+		count = _putchar('0');
+		return (count);
+	}
+	bin_count = bin_counter(decimal) * 2;
 	bin_holder = malloc(bin_count * sizeof (*bin_holder));
 	temp = decimal;
 	for (i = 0; i < bin_count - 1; i++)
